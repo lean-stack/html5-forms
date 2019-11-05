@@ -1,2 +1,5 @@
 # NPM/Yarn deps
 /node_modules/
+
+# Webpack Output
+/dist/
