@@ -2,6 +2,7 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCassExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -39,6 +40,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCassExtractPlugin(),
-    new HtmlWebpackPlugin({template: './src/index.html'})
+    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new CopyPlugin([
+      { from: 'src/favicon.ico' },
+      { from: 'src/images', to: 'images' }
+    ]),
   ]
 }
