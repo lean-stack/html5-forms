@@ -7,6 +7,61 @@
   <title>HTML 5 Forms</title>
 </head>
 <body>
-  <h1>HTML5 Formulare</h1>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top mr-2" alt="Logo">
+      HTML5 Formulare
+    </a>
+  </nav>
+  <div class="container mt-4">
+    <section>
+      <h2>HTML 5 Form Beispiel</h2>
+      <hr>
+    </section>
+    <form class="p-4">
+      <fieldset>
+        <legend>Registrierung</legend>
+        <div class="form-group">
+          <label for="acc">Account Name</label>
+          <input type="text" name="acc" class="form-control" id="acc">
+          <div class="invalid-feedback">
+            Wenigstens drei Zeichen müssen es bitte sein.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Adresse</label>
+          <input type="text" name="email" required class="form-control" id="email" aria-describedby="emailHelp"
+            placeholder="Enter email">
+          <div class="invalid-feedback">
+            Ungültige Email-Adresse
+          </div>
+          <small id="emailHelp" class="form-text text-muted">Deine Email-Adresse bleibt bei uns, wir teilen sie
+            niemals.</small>
+        </div>
+        <div class="form-group">
+          <label for="pw1">Passwort</label>
+          <input type="password" name="pw1" class="form-control" id="pw1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="pw2">Passwort (Wiederholung)</label>
+          <input type="password" name="pw2" class="form-control" id="pw2" placeholder="Password repeated">
+          <div class="invalid-feedback">
+            Passwörter stimmen nicht überein.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="zip">PLZ</label>
+          <input type="text" name="zip" class="form-control" id="zip"
+            placeholder="Postleitzahl">
+          <div class="invalid-feedback">
+            Bitte eine korrekte PLZ angeben.
+          </div>
+        </div>
+        <div class="actions d-flex justify-content-end pt-2">
+          <button type="submit" class="btn btn-primary">Absenden</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
 </body>
 </html>
